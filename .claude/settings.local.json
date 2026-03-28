@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:live.ultimate.dk)",
+      "Bash(curl -s \"https://live.ultimate.dk/uploads/results/2026/02_gymrace_amsterdam/data.csv\" -o data.csv)",
+      "Bash(open:*)",
+      "Bash(python3 -c \":*)",
+      "Bash(curl -s \"https://live.ultimate.dk/uploads/results/2026/02_gymrace_amsterdam/data2.csv\")",
+      "Bash(python3 -c \"import flask; print\\(''flask'', flask.__version__\\)\")",
+      "Bash(python3 -c \"import sqlite3; print\\(''sqlite3 ok''\\)\")",
+      "Bash(pip3 install:*)",
+      "Bash(curl -s \"https://live.ultimate.dk/uploads/results/2026/02_gymrace_amsterdam/data2.csv\" -o /Users/fede/development/claude/gymrace/data2.csv)",
+      "Bash(python3 -c \"import flask; print\\(flask.__version__\\)\")",
+      "Bash(/usr/local/bin/python3 -c \"import flask; print\\(''ok''\\)\")",
+      "Bash(python3.9 -c \"import flask; print\\(''ok''\\)\")",
+      "Bash(python3.9 --version)",
+      "Bash(python3.9 -c \"import flask; print\\(''flask'', flask.__version__\\)\")",
+      "Bash(python3.9 -c \"import sqlite3; print\\(''sqlite3 ok''\\)\")",
+      "Bash(python3.9 import_data.py)",
+      "Bash(pkill -f \"python3.9 server.py\")",
+      "Bash(BASE=\"https://live.ultimate.dk/uploads/2025/fitness/gymrace_october/overall\" curl -s \"$BASE/data.csv\")",
+      "Bash(cut -d';' -f1)",
+      "Bash(/Users/fede/development/claude/gymrace/style.css:*)"
+    ]
+  }
+}

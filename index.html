@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymRace Results</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="index-page">
+
+<header>
+  <h1>GymRace <span>Results</span></h1>
+  <span class="header-sub">All editions</span>
+</header>
+
+<div class="index-wrap">
+
+  <!-- Global search -->
+  <div class="global-search-wrap">
+    <div class="search-wrap global">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="global-search" placeholder="Search any participant across all races…" autocomplete="off">
+    </div>
+    <div id="global-results" class="global-results" style="display:none"></div>
+  </div>
+
+  <!-- Race cards -->
+  <div id="race-cards" class="race-cards">
+    <div class="race-cards-loading">Loading races…</div>
+  </div>
+
+</div>
+
+<script src="/index.js"></script>
+</body>
+</html>
