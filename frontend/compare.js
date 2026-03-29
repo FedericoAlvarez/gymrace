@@ -6,7 +6,7 @@ const RACE_LABELS = {
   '4-W': 'Women Heavy Buddies','4-X': 'Mixed Heavy Buddies',
 };
 
-const COLORS = ['#e8380d', '#2563eb']; // red for p1, blue for p2
+const COLORS = ['#fb7185', '#818cf8']; // rose for p1, indigo for p2
 
 function countryFlag(code) {
   if (!code || code.length !== 2) return '';
