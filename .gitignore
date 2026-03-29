@@ -1,0 +1,9 @@
+# Generated data — run `go run . import` to populate
+data/*.csv
+data/*.db
+
+# Compiled binary
+gymrace
+
+# macOS
+.DS_Store

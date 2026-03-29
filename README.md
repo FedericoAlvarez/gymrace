@@ -36,7 +36,6 @@ Currently includes:
 ### First time only — import the data
 
 ```bash
-cd /Users/fede/development/claude/gymrace
 go run . import
 ```
 
@@ -45,7 +44,6 @@ This downloads the CSV files from the official results website and imports every
 ### Start the server
 
 ```bash
-cd /Users/fede/development/claude/gymrace
 go run . serve
 ```
 

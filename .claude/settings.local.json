@@ -47,7 +47,8 @@
       "Bash(curl -s \"http://localhost:5001/participant?bib=480375&race=amsterdam-2026\")",
       "Bash(curl -s \"http://localhost:5001/api/detail/amsterdam-2026/1-438\")",
       "Bash(curl -s -I \"http://localhost:5001/participant.js\")",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(git:*)"
     ]
   }
 }
