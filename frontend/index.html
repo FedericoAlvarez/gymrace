@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GymRace Results</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body class="index-page">
+
+<header>
+  <h1>GymRace <span>Results</span></h1>
+  <span class="header-sub">All editions</span>
+</header>
+
+<div class="index-wrap">
+
+  <!-- Global search -->
+  <div class="global-search-wrap">
+    <div class="search-wrap global">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+      </svg>
+      <input type="text" id="global-search" placeholder="Search any participant across all races…" autocomplete="off">
+      <button id="search-clear" class="search-clear" style="display:none">✕</button>
+    </div>
+  </div>
+
+  <!-- Race cards (shown when no search) -->
+  <div id="race-cards" class="race-cards">
+    <div class="race-cards-loading">Loading races…</div>
+  </div>
+
+  <!-- Search results (shown when searching) -->
+  <div id="search-results" style="display:none"></div>
+
+</div>
+
+<!-- Comparison bar (shared with race page styles) -->
+<div id="compare-bar">
+  <div class="cbar-slots">
+    <div class="cbar-slot" id="cbar-slot-0"><span class="cbar-label">Select a participant</span></div>
+    <div class="cbar-vs">vs</div>
+    <div class="cbar-slot" id="cbar-slot-1"><span class="cbar-label">Select a participant</span></div>
+  </div>
+  <div class="cbar-actions">
+    <button class="btn-clear" id="btn-clear-compare">Clear</button>
+    <a class="btn-go-compare" id="btn-go-compare" href="#">Compare →</a>
+  </div>
+</div>
+
+<script src="/index.js"></script>
+</body>
+</html>
