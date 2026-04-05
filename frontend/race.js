@@ -74,7 +74,10 @@ function applyFilters() {
   filteredRows = allRows.filter(r => {
     if (q && !r.name.toLowerCase().includes(q)) return false;
     if (race && r.race !== race) return false;
-    if (status && r.fin !== status) return false;
+    if (status) {
+      const fin = r.fin || 'Finish';
+      if (fin !== status) return false;
+    }
     return true;
   });
 
