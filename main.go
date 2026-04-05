@@ -206,19 +206,29 @@ func importParticipants(db *sql.DB, race RaceConfig) {
 		if err != nil {
 			log.Fatalf("read csv: %v", err)
 		}
+		pos := col(row, idx, "Pos")
+		fin := col(row, idx, "Fin")
+		t := col(row, idx, "Time")
+		// Normalize: the CSV Fin column is unreliable for non-finishers.
+		// Use Pos as the authoritative status when it signals DSQ/DNF/DNS.
+		switch pos {
+		case "DSQ", "DNF", "DNS":
+			fin = pos
+			t = ""
+		}
 		_, err = stmt.Exec(
 			race.ID,
 			col(row, idx, "Bib"),
 			col(row, idx, "Select"),
-			col(row, idx, "Pos"),
+			pos,
 			col(row, idx, "PosCat"),
 			col(row, idx, "Name"),
 			col(row, idx, "Country"),
 			col(row, idx, "Cat"),
 			col(row, idx, "Spl1"),
 			col(row, idx, "Spl3"),
-			col(row, idx, "Fin"),
-			col(row, idx, "Time"),
+			fin,
+			t,
 		)
 		if err != nil {
 			log.Fatalf("insert participant: %v", err)
